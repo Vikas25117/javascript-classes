@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events</title>
+    <!-- bootstrap link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="mb-5" onresize="resizeFunc()">
+
+    <!-- window onload, onscroll, onunload, onresize (yeh sbi events body tag per work krte hai es lye hm en sbi ko one by one body tag per lga kr dekhege ) -->
+
+    <script>
+        function resizeFunc(){
+            alert("This is a window resize section")
+        }
+    </script>
+    
+    <!-- This secrion start as a yahoo baba you tube channel video -->
+
+    <h1 class="bg-danger text-white p-3">JavaScript Events</h1>
+
+    <button class="bg-dark text-white border" onclick="document.getElementById('onclick').innerHTML = Date()">click</button>
+    <p id="onclick"></p>
+
+    <button class="border" onclick="this.innerHTML = Date()">This click button</button>
+
+    <button class="border d-block mt-3" onclick="dispalyTime()">Display Time Click</button>
+    <script>
+        function dispalyTime(){
+            document.getElementById("displayTime").innerHTML = Date();
+        }
+    </script>
+    <p id="displayTime"></p>
+
+    <button class="border bg-danger text-white" onclick="hello()">alert button</button>
+    <script>
+        function hello(){
+            alert("Hello Bhai");
+        }
+    </script>
+
+    <!-- on dbl click section -->
+    <button class="bg-danger d-block mt-3 text-white border" ondblclick="dblclick()">dblclick</button>
+    <script>
+        function dblclick(){
+            let dblclick1 = "This is a dubble click section";
+            document.getElementById("dubbleclick").innerHTML = dblclick1;
+        }
+    </script>
+    <p id="dubbleclick"></p>
+
+    <!-- right click section (oncontextmenu) -->
+    <button class="d-block bg-success mt-3 border" oncontextmenu="rightClick()">right click</button>
+
+    <script>
+        function rightClick(){
+            let dbkClick = "This is a dubble click section"
+            document.getElementById("right-click").innerHTML =  `${dbkClick}`;
+        }
+    </script>
+    <p id="right-click"></p>
+
+    <!-- onmouseenter section (like hover section) -->
+    <button type="button" class="d-block border bg-secondary text-white" onmouseenter="mouseEnter()">onmouseenter</button>
+    <script>
+        function mouseEnter(){
+            let mouseHover = "This is a mouse enter section";
+            document.getElementById("mouse-enter").innerHTML = mouseHover;
+        }
+    </script>
+    <p id="mouse-enter"></p>
+
+    <!-- on mouseout section -->
+    <button type="button" class="border bg-info text-white d-block" onmouseout="mouseOut()">mouseout</button>
+    <script>
+        function mouseOut(){
+            let mouseOutVar = "This is a mouse out section";
+            document.getElementById("mouse-out").innerHTML = mouseOutVar;
+        }
+    </script>
+    <p id="mouse-out"></p>
+
+    <!-- onmousedown section (yeh click ki tra hi hai es per jb v mouse click hoga yeh tbi hi work krega press the key) -->
+    <button type="button" class="d-block bg-light border" onmousedown="onMouseDown()">onmousedown</button>
+    <script>
+        function onMouseDown(){
+            let mouseDownVar = "This is a mouse down section";
+            document.getElementById("mouse-down").innerHTML = mouseDownVar;
+        }
+    </script>
+    <p id="mouse-down"></p>
+
+    <!-- onmouseup section (esme mouse ko click krne k bad jb hm mouse ko up krege tb yeh function work krega ) -->
+    <button type="button" class="d-block border bg-danger text-white" onmouseup="onMouseUp()">onmouseup</button>
+    <script>
+        function onMouseUp(){
+            let mouseUpVar = "This is a mouseup section";
+            document.getElementById("mouse-up").innerHTML = mouseUpVar;
+        }
+    </script>
+    <p id="mouse-up"></p>
+
+    <!-- ====================== keypress section ==================== -->
+
+    <!-- onkeypress section (esme apni keyword ki keys aa jaygi sari) key press hme yeh batata hai ki konsa word press kiya gya hai -->
+    <!-- bootstrap form start -->
+    <!-- esme hamne onkeypress form per lagai hai per hm esko body or form per hi lga skte hai form per hm esko input type me v lga skte hai jn user koi v key press krega  -->
+    <form class="bg-danger text-white p-5" onkeypress="keyPress()">
+        <h3>This is keypress event on this form.</h3>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <button type="submit" class="btn btn-dark">Submit</button>
+      </form>
+    <!-- bootstrap form end -->
+
+    <script>
+        /*
+        //Ouestion:- onkeypress ko niche likhe style se kase use kre id de kr//
+        function keyPress(){
+            let keyPressVar = "This is a keypress section and you are press the any key";
+            document.getElementById("form-section").innerHTML = keyPressVar;
+        }
+        */
+       function keyPress(){
+        alert("This is a KEYPRESS section and you are press the any key")
+       }
+    </script>
+
+<!-- ====================== keydown section ==================== -->
+
+    <!-- keydown section (keydown hme yeh batata hai ki konsi key dabai gyi hai na ki yeh batata hai ki konsa word press kiya gya hai ) -->
+
+    <!-- bootstrap form start -->
+    <form class="mt-5 bg-info p-5" onkeydown="keyDownFunc()">
+        <h3>This is keydown event on this form.</h3>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+       
+        <button type="submit" class="btn btn-dark text-white">Submit</button>
+      </form>
+    <!-- bootstrap form end -->
+
+    <script>
+        function keyDownFunc(){
+            alert("This is a KEYDOWN section and you are the down any key not that any word ");
+        }
+    </script>
+
+    <!-- ====================== keyup section ==================== -->
+
+    <!-- onkeyup section (esme jb hm key ko press kr k up krte hai jb yeh run hota hai ) -->
+
+     <!-- bootstrap form start -->
+     <form class="mt-5 bg-success text-white p-5" onkeyup="keyUpFunc()">
+        <h3>This is keyup event on this form.</h3>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+       
+        <button type="submit" class="btn btn-dark text-white">Submit</button>
+      </form>
+    <!-- bootstrap form end -->
+      <script>
+        function keyUpFunc(){
+            alert("This is a KEYUP section and you are the press the key than up the key ")
+        }
+      </script>
+
+       <!-- ============= onresize section (window events) ============ -->
+
+       
+      
+
+</body>
+
+</html>
