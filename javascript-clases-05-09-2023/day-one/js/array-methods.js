@@ -78,3 +78,39 @@ let arraySliceResult = arraySlice.slice(1,3);
 // 1 is define where to start accounting array and 3 is define where to stop aray but 3 is not counting 
 document.getElementById("array-slice-result").innerHTML = arraySliceResult;
 
+
+/* ============= JAVASCRIPT SORTING ARRAY SECTION ================ */
+const Fruits = ["Banana", "Apple", "Kiwi", "Mango", "Chiku"];
+document.getElementById("array-sorting").innerHTML = Fruits;
+
+const FruitsSorting = Fruits.sort();
+document.getElementById("array-sorting-one").innerHTML = FruitsSorting;
+
+// javascript reverse sorting array methods
+const FruitsReverse = ["Banana", "Apple", "Kiwi", "Mango", "Chiku", "DraganFruit"];
+document.getElementById("array-sorting-reverse").innerHTML = FruitsReverse;
+FruitsReverse.sort(); //first sort the array
+FruitsReverse.reverse(); // reverse the array now
+document.getElementById("array-sorting-reverse-one").innerHTML = FruitsReverse;
+
+// javascript numric sorting array section 
+const numaricSorting = [1,3,5,8,7,12,14,6,2];
+document.getElementById("array-sorting-numaric").innerHTML = numaricSorting;
+numaricSorting.sort(function(a,b){return a - b});
+
+// it will print the highest to lowest number 
+/*numaricSorting.sort(function(a,b){return b - a});*/
+document.getElementById("array-sorting-numaric-one").innerHTML = numaricSorting;
+
+// javascript compare function in array sorting section 
+const sortingCompareFunction = [1,3,5,8,7,12,14,6,2];
+document.getElementById("javascript-compare-function-array-sorting").innerHTML = sortingCompareFunction;
+
+function sortingAlphabetically(){
+    sortingCompareFunction.sort();
+    document.getElementById("javascript-compare-function-array-sorting").innerHTML = sortingCompareFunction;
+}
+function sortingNumerically(){
+    sortingCompareFunction.sort(function(a,b){return a - b});
+    document.getElementById("javascript-compare-function-array-sorting-one").innerHTML = sortingCompareFunction;
+}
