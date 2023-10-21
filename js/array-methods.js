@@ -114,3 +114,37 @@ function sortingNumerically(){
     sortingCompareFunction.sort(function(a,b){return a - b});
     document.getElementById("javascript-compare-function-array-sorting-one").innerHTML = sortingCompareFunction;
 }
+
+// javascript random methods in array sorting 
+const randomSorting = [1,3,5,8,7,12,14,6,2];
+document.getElementById("javascript-random-sorting").innerHTML = randomSorting;
+function randomMethods(){
+    randomSorting.sort(function(){return 0.5 - Math.random()});
+    document.getElementById("javascript-random-sorting").innerHTML = randomSorting;
+}
+
+// javascript find the lowest and highest value in array sorting methods 
+const valueFindingSorting = [1,3,5,8,7,12,14,6,2];
+document.getElementById("javascript-sorting-array-find-values").innerHTML = valueFindingSorting;
+
+valueFindingSorting.sort(function(a, b){return a - b});
+document.getElementById("javascript-sorting-array-find-values").innerHTML = "The lowest value is :- " + valueFindingSorting[0];
+
+// heighest value find krne k lye hm function me b-a type krege to value print ho jaygi or variable k index me hm [0] likhege 
+/*valueFindingSorting.sort(function(a, b){return b - a});
+document.getElementById("javascript-sorting-array-find-values").innerHTML = "The Highest value is :- " + valueFindingSorting[0];*/
+
+// javascript sorting object array section 
+const carsName = [
+    {type:"volvo", year:2016},
+    {type:"maruti", year:2001},
+    {type:"bmw", year:2003}
+];
+carsName.sort(function(a,b){return a.year - b.year});
+function dispalyCars(){
+    document.getElementById("javascript-sorting-object-array").innerHTML = 
+    carsName[0].type + " " + carsName[0].year + "<br>" + 
+    carsName[1].type + " " + carsName[1].year + "<br>" +
+    carsName[2].type + " " + carsName[2].year ;
+};
+dispalyCars();
