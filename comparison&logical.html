@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>javascript comparison and logical opreaters</title>
+    <!-- bootstrap link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body style="margin-bottom: 100px;">
+
+    <h1 class="bg-danger text-white p-2 text-center">JavaScript Comparison and Logical Operators</h1>
+
+    <strong>javascript equal to (== ) Operator </strong>
+    <small class="d-block bg-dark text-white p-2">NOTE :- javascript equal opreater two value ko mach krta hai ki dono
+        values same hai ja nhi same hai to true return nhi too false </small>
+    <p id="javascript-equal-to-opreater"></p>
+    <script>
+        let equal = 10;
+        let equalResult = equal == 10;
+        // let equalResult = equal == 8;
+        // let equalResult = equal == "10";
+        document.getElementById("javascript-equal-to-opreater").innerHTML = equalResult;
+    </script>
+
+    <strong>javascript equal value and equal type ( === ) opreater</strong>
+    <small class="d-block bg-dark text-white p-2">NOTE :- javascript equal value and equal type (===) opreater value or
+        data type dono mach krta hai or yeh v true or false return krta hi </small>
+    <p id="javascript-equal-and-equal-type-opreater"></p>
+    <script>
+        let equaltype = 10;
+        let equaltyperesult = equaltype === 10; // return true
+        // let equaltyperesult = equaltype === "10"; // return false
+        // let equaltyperesult = equaltype === 12; // return false 
+        document.getElementById("javascript-equal-and-equal-type-opreater").innerHTML = equaltyperesult;
+    </script>
+
+    <strong>
+        javascript not equal (!=) opreater
+    </strong>
+    <small class="d-block bg-dark text-white p-2">NOTE :- javascript not equal opreater hme ault value return krta hai
+        jase ki true ko ka false or false ka true return krta hai </small>
+    <p id="not-equal-opreater"></p>
+    <script>
+        let notEqual = 10;
+        let notEqualResult = notEqual != 10;
+        document.getElementById("not-equal-opreater").innerHTML = notEqualResult;
+    </script>
+
+    <strong>javascript not equal value or not equal type (!==) opreater </strong>
+    <small class="d-block bg-dark text-white p-2">NOTE :- javascript not equal value or not equal type (!==) opreater
+        yeh value or data type dono hi check krta hai or yeh true ko false or false ko true me convert kr deta hai
+        example beklow like this </small>
+    <p id="not-equal-and-not-equal-data-type"></p>
+
+    <script>
+        let notEqualAndNotEqualDataType = 10;
+        let notEqualAndNotEqualDataTypeResult = notEqualAndNotEqualDataType !== 10;
+        // let notEqualAndNotEqualDataTypeResult = notEqualAndNotEqualDataType !== 12; //true
+        // let notEqualAndNotEqualDataTypeResult = (notEqualAndNotEqualDataType !=="10"); //true
+        document.getElementById("not-equal-and-not-equal-data-type").innerHTML = notEqualAndNotEqualDataTypeResult;
+    </script>
+
+    <strong>javascript greater than > opreater</strong>
+    <small class="d-block bg-dark text-white p-2">NOTE :- javascript greatyer than > opreater hme value ko compare krke hme true false value return krta hai </small>
+    <p id="greater-than-opreater"></p>
+
+    <script>
+        let greaterThan = 10;
+        let greaterThanOpreaterReasult = greaterThan > 12;
+        document.getElementById("greater-than-opreater").innerHTML = greaterThanOpreaterReasult;
+    </script>
+
+    <strong>
+        javascript less than (<) opreater 
+    </strong>
+    <small class="d-block bg-dark text-white p-2">
+        NOTE :- javascript greatyer than > opreater hme value ko compare krke hme true false value return krta hai 
+    </small>
+    <p id="less-than-opreater"></p>
+    <script>
+        let lessThan = 10;
+        let lessThanResult = lessThan < 11;
+        document.getElementById("less-than-opreater").innerHTML = lessThanResult;
+    </script>
+
+    <strong>
+        javascript greater than or equal to >= opreater 
+    </strong>
+    <small class="d-block bg-dark text-white p-2">esme value ja to equal hoo ja first value se second value big hoo</small>
+    <p id="greater-than-equal-to"></p>
+    <script>
+        let greaterThanEqualTo = 10;
+        // let greaterThanEqualToResult = greaterThanEqualTo >= 91; //false
+        let greaterThanEqualToResult = greaterThanEqualTo >= 9;
+        document.getElementById("greater-than-equal-to").innerHTML = greaterThanEqualToResult;
+    </script>
+
+    <strong>
+        javascript less than or equal to <= opreater
+    </strong>
+    <small class="d-block bg-dark text-white p-2">
+        esme value ja to equal hoo ja first value second value se small ho 
+    </small>
+    <p id="less-than-equal-to"></p>
+    <script>
+        let lessThanEqualTo = 10;
+        // let lessThanEqualToResult = lessThanEqualTo <= 10; //true
+        let lessThanEqualToResult = lessThanEqualTo <= 10; //true
+        document.getElementById("less-than-equal-to").innerHTML = lessThanEqualToResult;
+    </script>
+
+<h1 class="bg-danger text-white p-2 text-center">JavaScript Logical Operators</h1>
+<strong>
+    JavaScript logical AND opreater ( && )
+</strong>
+<small class="d-block bg-dark text-white p-2">NOTE :- javascript logical AND opreater dono values hi check krta hai agar dono conditions aps me mil jay to hi true return hoga nhi to false return hoga  </small>
+<p id="logical-and-opreater"></p>
+
+<script>
+    let logicalAndOpreater = 10;
+    let logicalAndOpreaterTwo = 20;
+    // let logicalAndOpreaterResult = logicalAndOpreater > 12 && logicalAndOpreaterTwo > 21;
+    let logicalAndOpreaterResult = logicalAndOpreater < 12 && logicalAndOpreaterTwo < 21;
+    document.getElementById("logical-and-opreater").innerHTML = logicalAndOpreaterResult;
+</script>
+
+<strong>
+    javascript logical OR opreater ( || )
+</strong>
+<small class="d-block bg-dark text-white p-2">
+    NOTE :- javascript logical OR opreater koi v one value ko true hone per true return krta hai agar dono hi value unmach hai to return me true ayega 
+</small>
+<p id="logical-or-opreater"></p>
+<script>
+    let logicalOrOpreater = 10;
+    let logicalOrOpreaterTwo = 20;
+    // let logicalOrOpreaterResult = logicalOrOpreater > 9 || logicalAndOpreaterTwo > 19;
+    // let logicalOrOpreaterResult = logicalOrOpreater < 9 || logicalAndOpreaterTwo < 19; // false 
+    let logicalOrOpreaterResult = logicalOrOpreater > 21 || logicalAndOpreaterTwo > 19;
+    document.getElementById("logical-or-opreater").innerHTML = logicalOrOpreaterResult
+</script>
+
+<strong>
+    javascript logical NOT opreater ( ! )
+</strong>
+<small class="d-block bg-dark text-white p-2">NOTE :- javascript logical NOT (!) opreater ault value return krta hai yeh true ko false or false ko true return krta hi  </small>
+<p id="logical-not-opreater"></p>
+<script>
+    let logicalNotOpreater = 10;
+    let logicalNotOpreaterTwo = 20;
+    let logicalNotOpreaterResult = !(logicalNotOpreater > 11) + "<br>" + !(logicalNotOpreaterTwo > 19);
+    document.getElementById("logical-not-opreater").innerHTML = logicalNotOpreaterResult;
+</script>
+
+<strong>
+    javascript Conditional Ternary Opreater ( ? )
+</strong>
+<small class="d-block bg-dark text-white p-2">
+    NOTE :- javascript ternary opreater esme first value true ho to yeh first return krta hai nhi to second value return krta hai 
+</small>
+<p id="ternary-opreater"></p>
+<script>
+    let age = 20;
+    let ternaryOpreater = (age < 18) ? "you are eligible" : "You are note eligible";
+    document.getElementById("ternary-opreater").innerHTML = ternaryOpreater;
+</script>
+
+<strong>
+    javascript ternary opreater in form type
+</strong>
+<small class="d-block bg-dark text-white p-2">NOTE :- esme hm ak button bna k osme value dal k check kr skte hai ki hm eligible hai ja nhi like this</small>
+<input id="age" value="18" class="my-2"/>
+<button onclick="ternaryFunction()" class="d-block border-0 bg-success rounded p-2 text-white ">Try this ternary opreater</button>
+<p id="ternaryOpreaterId" class="bg-danger text-white my-2"></p>
+<script>
+    function ternaryFunction(){
+        let age = document.getElementById("age").value;
+        let ternaryEligible = (age > 18) ? "You are eligible vikas" : "You are not eligible bhai";
+        document.getElementById("ternaryOpreaterId").innerHTML = ternaryEligible;
+    }
+</script>
+
+<strong>
+    javscript The Nullish Coalescing Operator (??)
+</strong>
+<small class="d-block bg-dark text-white p-2">NOTE :- javascript nullish Coalescing opreater me agar first value <u>null ja undefined</u> hoo to second value run ho jati hai agar first value empty string hai to b first value empty string k sath paste hogi second value nhi  </small>
+<p id="nullish-coalescing-opreater"></p>
+<script>
+    let nullishCoalescingOpreater = null;
+    let nullishCoalescingOpreaterTwo = 20;
+    let nullishCoalescingOpreaterResult = nullishCoalescingOpreater ?? nullishCoalescingOpreaterTwo;
+    document.getElementById("nullish-coalescing-opreater").innerHTML = nullishCoalescingOpreaterResult;
+</script>
+
+<strong>
+    javscript optional chaining opreater ( ?. )
+</strong>
+<small class="d-block bg-dark text-white p-2">NOTE :- javascript optional chaining opreater hme return krta hai ki agar hamara koi object undefined hai to yeh hme error show nhi krta hai es situation me hme yeh undefined ja null return krta hai </small>
+<p id="optional-chaining-opreater"></p>
+<script>
+    let optionalChaining = {type:"car", model:"2023", color:"red"};
+    // hamare pass me name nam ka object nhi to esne error ki bajaye hme undefined return kiya hai 
+    document.getElementById("optional-chaining-opreater").innerHTML = optionalChaining?.name;
+</script>
+
+
+</body>
+
+</html>
