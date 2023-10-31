@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript break and continue </title>
+    <!-- bootstrap link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body style="margin-bottom: 100px;">
+
+    <h1 class="bg-dark text-white text-center p-2">javascript break and continue section </h1>
+    <strong>
+        javascript break statement
+    </strong>
+    <small class="bg-success text-white p-2 my-2 d-block">NOTE :- javascript break statement me loops aage nhi jata hai
+        whi stop ho jata hai </small>
+    <p id="javascript-break-statement"></p>
+
+    <script>
+        let breakStatement = "";
+        for (let i = 0; i < 11; i++) {
+            if (i === 3) { breakStatement += i + " loop is over " + "<br>"; break; }
+            breakStatement += i + "<br>";
+        };
+        document.getElementById("javascript-break-statement").innerHTML = breakStatement;
+    </script>
+
+    <strong>
+        javascript continue statement
+    </strong>
+    <small class="bg-success text-white p-2 my-2 d-block">
+        javascript continue statement :- esme loop continue run hota hai jha tk eski value mach na ho jay per esme jha
+        per hmne apni condition de hai wha per hm kuj text print kra skte hai jse ki below example me hai condition
+        mach krke yeh loop aage run hota rehata hai
+    </small>
+    <p id="javascript-continue-statement"></p>
+    <script>
+        let continueStatement = "";
+        for (let icontinue = 0; icontinue < 10; icontinue++) {
+            if (icontinue === 5) { continueStatement += "The loop is mach condition but loop continue run " + icontinue + "<br>"; continue; }
+            continueStatement += icontinue + "<br>";
+        };
+        document.getElementById("javascript-continue-statement").innerHTML = continueStatement;
+    </script>
+
+    <strong>
+        javascript labels section
+    </strong>
+    <small class="bg-success text-white p-2 my-2 d-block">
+        javascript labels :- esme loop continue chalta hai per jha per break aa gya loop whi stop ho jata hai but esme
+        continue statement work nhi krta hai esme hm list ka use krke one one item nikalte hai
+    </small>
+    <p id="javascript-labels"></p>
+    <script>
+        const labelsCars = ["BMW", "Volvo", "Saab", "Ford"];
+        let labelsCarsText = "";
+        list: {
+            labelsCarsText += labelsCars[0] + "<br>";
+            labelsCarsText += labelsCars[1] + "<br>";
+            break list;
+            labelsCarsText += labelsCars[2] + "<br>";
+            labelsCarsText += labelsCars[3] + "<br>";
+        };
+        document.getElementById("javascript-labels").innerHTML = labelsCarsText;
+    </script>
+
+    <h1 class="bg-info text-center p-2 "> javascript find even and odd numbers section </h1>
+    <strong> javascript find even numbers </strong>
+    <small class="bg-primary p-2 text-white d-block">
+        even numbers are devide to 2
+    </small>
+    <p id="find-even-number"></p>
+    <script>
+        let evenNumber = "";
+        for (let iEven = 1; iEven <= 100; iEven++) {
+            if (iEven % 2 == 0) {
+                document.getElementById("find-even-number").innerHTML = evenNumber += iEven + "<br>";
+            }
+        };   
+    </script>
+
+    <strong> javascript find odd numbers </strong>
+    <small class="bg-primary p-2 text-white d-block">
+        odd numbers are not devide to 2
+    </small>
+    <p id="find-odd-numbers"></p>
+    <script>
+        let findOddNumber = "";
+        for (let iOdd = 1; iOdd < 100; iOdd++){
+            if(iOdd % 2 != 0){
+                document.getElementById("find-odd-numbers").innerHTML= findOddNumber += iOdd + "<br>";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

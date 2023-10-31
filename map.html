@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript Map() method</title>
+    <!-- bootstrap link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body style="margin-bottom: 100px;">
+    <h1 class="bg-danger text-white p-2 text-center">javascript Map() method section </h1>
+    <strong>
+        javascript new Map() method
+    </strong>
+    <small class="bg-warning d-block p-2 text-white my-2">
+        javascript Map() method me hm diffrent type values ko store kr skte hai or onko get kr skte hai example below
+        like this
+    </small>
+    <p id="map=method"></p>
+    <script>
+        let mapFruits = new Map([
+            ["applw", 100],
+            ["banana", 200],
+            ["kiwi", 300]
+        ]);
+        document.getElementById("map=method").innerHTML = mapFruits.get("kiwi");
+    </script>
+
+    <strong>
+        javascritp set() map method
+    </strong>
+    <small class="bg-warning d-block p-2 text-white my-2">
+        esme hm set() map method ki help se array me values ko add kr skte hai or onki value ko get kr skte hai NOTE :-
+        agar kisi array ki values ko cahnge krna ho to hm woh b kr skte hai
+    </small>
+    <p id="set-map-method"></p>
+    <script>
+        let setMapMethod = new Map();
+        setMapMethod.set("apple", 200);
+        setMapMethod.set("banana", 300);
+        setMapMethod.set("kiwi", 400);
+        // setMapMethod.set("kiwi", 100) // ES METHOD SE HM KISI KI V VALUES KO CHANGE KR SKTE HAI 
+        document.getElementById("set-map-method").innerHTML = setMapMethod.get("kiwi");
+    </script>
+
+    <strong>
+        javascript delete() method section
+    </strong>
+    <small class="bg-warning d-block p-2 text-white my-2">
+        esme hm kisi v values ko delete ke skte hai
+    </small>
+    <p id="map-delete-method"></p>
+    <script>
+        let mapDelete = new Map([
+            ["apple", 100],
+            ["banana", 200],
+            ["kiwi", 300]
+        ]);
+        mapDelete.delete("apple");
+        document.getElementById("map-delete-method").innerHTML = mapDelete.size;
+    </script>
+
+    <strong>
+        javascript map has() method section 
+    </strong>
+    <small  class="bg-warning d-block p-2 text-white my-2">
+        yeh hme true or false value return krti hai agar value hai to true nhi to false
+    </small>
+    <p id="map-has-method"></p>
+    <script>
+        let mapHas = new Map([
+            ["apple", 100],
+            ["banana", 200],
+            ["kiwi", 300]
+        ]);
+        mapHas.delete("apple");
+        document.getElementById("map-has-method").innerHTML = mapHas.has("apple");
+    </script>
+
+    <strong>
+        javascript map forEach() method section 
+    </strong>
+    <small  class="bg-warning d-block p-2 text-white my-2">
+        javascript map forEach() method array ki har aak values k pass jata hai or on values ko hm print krwa skte hai 
+    </small>
+    <p id="map-for-each-method"></p>
+    <script>
+        let mapForEach = new Map([
+            ["apple", 100],
+            ["banana", 200],
+            ["kiwi", 300]
+        ]);
+        let mapForEachText = "";
+        mapForEach.forEach(function (value,key){
+            mapForEachText += key + " = " + value + "<br>"
+        });
+        document.getElementById("map-for-each-method").innerHTML = mapForEachText;
+    </script>
+
+    <strong>
+        javascript entries() method section 
+    </strong>
+    <small  class="bg-warning d-block p-2 text-white my-2">
+        yeh b hme key or value ko print kr k deta hai esample below like this
+    </small>
+    <p id="map-entries-method"></p>
+    <script>
+        let mapEntries = new Map([
+            ["apple", 100],
+            ["banana", 200],
+            ["kiwi", 300]
+        ]);
+        let mapEntriesText = "";
+        for(let mapEntriesResult of mapEntries.entries()){
+            mapEntriesText += mapEntriesResult + "<br>";
+        };
+        document.getElementById("map-entries-method").innerHTML = mapEntriesText;
+    </script>
+
+
+
+</body>
+
+</html>
