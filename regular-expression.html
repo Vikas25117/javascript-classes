@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript Regular Expression</title>
+    <!-- bootstrap link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<script>
+    console.log("This is a javascript Regular Expression section");
+</script>
+
+<body style="margin-bottom: 100px;">
+    <marquee behavior="" direction="">
+        <h2>In this chapter We will use console</h2>
+    </marquee>
+    <h1 class="bg-secondary text-white p-2 text-center">
+        Javascript Regular Expression Section
+    </h1>
+    <small class="bg-warning text-white p-2 d-block my-2">
+        // this is a javascript comment syambol but in this chapter this is a ( /vikas/ ) regular expression litreal in
+        javascript.
+    </small>
+    <strong>javascript function to mach expression 1:- exec() function </strong>
+    <small class="bg-warning text-white p-2 d-block my-2">
+        This function will return an aray for mach or null for no mach. let check the console and see the result where
+        is your text and index number etc.. yeh hme one hi vikas search kr k dega agar hamare pass one line me do vikas
+        ho
+    </small>
+    <p id="javascript-exce-function"></p>
+    <script>
+        let regExpression = /vikas/;
+        let javascriptExceFunction = "My name is vikas";
+        let javascriptExceFunctionResult = regExpression.exec(javascriptExceFunction);
+        document.getElementById("javascript-exce-function").innerHTML = javascriptExceFunctionResult;
+        // let check the console 
+        console.log(javascriptExceFunctionResult);
+    </script>
+
+    <strong>javascript Regular expression ( /g ) globaly and result check this console </strong>
+    <small class="bg-warning text-white p-2 d-block my-2">
+        yeh hme globaly search kr k dega jase ki one line me doo ja doo se jayada searches result hoo to yeh on sbi ko
+        print kr k dega with index number agar result mach nhi hai or hm fir v search krte hai to error aa jayga ja
+        null print hoga OR Hme multiple value k lye variabel ko bar bar define krna hoga same name ka
+    </small>
+    <p id="javascripr-globaly"></p>
+    <script>
+        let regExpressionOne = /vikas/g;
+        let javascriptGlobaly = "My name is vikas and vikas is a nice guy and vikas is a vikas ";
+        let javascriptGlobalyResult = regExpressionOne.exec(javascriptGlobaly);
+
+        document.getElementById("javascripr-globaly").innerHTML = javascriptGlobalyResult;
+
+        // let check this console and get the correct answer esme hme variabel ko bar bar define krna hoga same name ka variabel example below likek this 
+        console.log("This is a javascript regular expression litreals /g globaly section");
+        console.log(javascriptGlobalyResult);
+        javascriptGlobalyResult = regExpressionOne.exec(javascriptGlobaly);
+        console.log(javascriptGlobalyResult);
+        javascriptGlobalyResult = regExpressionOne.exec(javascriptGlobaly);
+        console.log(javascriptGlobalyResult);
+        javascriptGlobalyResult = regExpressionOne.exec(javascriptGlobaly);
+        console.log(javascriptGlobalyResult);
+    </script>
+
+    <strong> javascript Regular Expression ( /i ) i mean case insensitive and result check this console </strong>
+    <small class="bg-warning text-white p-2 d-block my-2">
+        yeh hme case insensitive leter v print kr k deta hai jse ki word capital me ho ja haff capital me yeh result
+        mach kr k print kr dega
+    </small>
+    <p id="javascript-case-insensitive"></p>
+    <script>
+        let regExpressionTwo = /vikas/i;
+        let javascriptCaseInsensitive = "My name viKAs";
+        let javascriptCaseInsensitiveResult = regExpressionTwo.exec(javascriptCaseInsensitive);
+        document.getElementById("javascript-case-insensitive").innerHTML = javascriptCaseInsensitiveResult;
+        // let check the console and get the correct answer 
+        console.log("This is a javascript Case Insensitive section");
+        console.log(javascriptCaseInsensitiveResult);
+    </script>
+
+    <strong>javascript function to test expression 2:- test() function </strong>
+    <small class="bg-warning text-white p-2 d-block my-2">
+        yeh hme true or faslse return krta hai
+    </small>
+    <p id="javascript-test-function"></p>
+    <script>
+        let regExpressionThree = /vikas/;
+        let testFunction = "My name is vikas kumar";
+        let testFunctionResult = regExpressionThree.test(testFunction);
+        document.getElementById("javascript-test-function").innerHTML = testFunctionResult;
+        // let check the console
+        console.log("This is a javascript regular expression test() function");
+        console.log(testFunctionResult);
+    </script>
+
+    <strong>javascript function to match expression 3:- match() function </strong>
+    <small class="bg-warning text-white p-2 d-block my-2">
+        it will return an array of result or null esko string per aply kiya jata hai yeh thora ault hota hai
+    </small>
+    <p id="javascript-match"></p>
+    <script>
+        let regFour = /vikas/;
+        let javascriptMatch = "My name vikas kumar ";
+        let javascriptMatchResult = javascriptMatch.match(regFour);
+        document.getElementById("javascript-match").innerHTML = javascriptMatchResult;
+        // let check the console
+        console.log("This is a javascript regular expression match() function");
+        console.log(javascriptMatchResult);
+    </script>
+
+    <strong>javascript function to search expression 4:- search() function </strong>
+    <small class="bg-warning text-white p-2 d-block my-2">
+        return index of first mach otherwise -1
+    </small>
+    <p id="javascript-search"></p>
+    <script>
+        let regFive = /vikas/;
+        let javascriptSearch = "My name is vikas kumar ";
+        let javascriptSearchResult = javascriptSearch.search(regFive);
+        document.getElementById("javascript-search").innerHTML = javascriptSearchResult + " " + "Check the result in console";
+        // let check the console
+        console.log("This is a javascript regular expression search() function");
+        console.log(javascriptSearchResult);
+    </script>
+
+    <strong>javascript function to replace expression 5:- replace() function </strong>
+    <small class="bg-warning text-white p-2 d-block my-2">
+        return new replaced string with all the replacements and yeh pehale mach krta hai jase ki viaks ko vicky me
+        replace krna tha to esne vikash ko v replace kr diya <mark class="text-danger d-block p-2 rounded"> NOTE :-
+            esme hme puri string ke result ko replace krne k lye ( " /g global flag " ) regular expression ka use krna
+            hga </mark>
+    </small>
+    <p id="javascript-replace"></p>
+    <script>
+        let regSix = /vikas/g;
+        let javascriptReplace = "My name is vikash. vikas is a vikas and vikas is a nice guy";
+        let javascriptReplaceResult = javascriptReplace.replace(regSix, "Vicky");
+        document.getElementById("javascript-replace").innerHTML = javascriptReplaceResult + " <br>" + "Check the console";
+
+        // let check the console 
+        console.log("This is a javasdcript regular espression replace() function");
+        console.log(javascriptReplaceResult);
+    </script>
+
+    <strong>javascript Regular Expressionin which if / else condition </strong>
+    <h2 class="bg-secondary text-white p-2 text-center">javascript Regular Expression metacharacter symbol section
+    </h2>
+    <small class="bg-warning text-white p-2 d-block my-2">
+        esme hamne javascript Regular Expression me if else condition ka use kiya hai agar condition true hai to result
+        print kr do nhi to other statement print kr do
+    </small>
+    <p class="m-0 p-0">Check the console and get the answer right now</p>
+    <p id="javascript-if-else"></p>
+    <script>
+        let regSeven = /vikas/;
+        let javascriptIfElse = "My name is vikas kumar vikas ";
+        console.log("This is a javascript regular expression if else condition section");
+        if (regSeven.test(javascriptIfElse)) {
+            document.getElementById("javascript-if-else").innerHTML = regSeven.source;
+            console.log(`The string ${javascriptIfElse} mach the expression ${regSeven.source}`);
+        } else {
+            document.getElementById("javascript-if-else").innerHTML = regSeven.source;
+            console.log(`The string ${javascriptIfElse} does not mach the expression ${regSeven.source}`);
+        }
+    </script>
+
+    <strong>
+        javascript caret symbol ( ^ ) metacharacter symbol
+    </strong>
+    <small class="bg-warning text-white p-2 d-block my-2">
+        (^) caret symbol me yeh suru se mach krta hai agar mach ho gya ho to print krega value ko varna nhi krega
+    </small>
+    <p id="javascript-caret-symbol"></p>
+    <script>
+        let regSymbol = /^vik/;
+        let javascriptSymbol = "vikas is vikas kumar  ";
+        let javascriptSymbolResult = regSymbol.exec(javascriptSymbol);
+        document.getElementById("javascript-caret-symbol").innerHTML = javascriptSymbolResult;
+        console.log("This is a caret symbol section (^)");
+        console.log("The result from exec is :- ", javascriptSymbolResult);
+
+        if (regSymbol.test(javascriptSymbol)) {
+            console.log(`The string ${javascriptSymbol} mach the expression ${regSymbol.source}`);
+        } else {
+            console.log(`The string ${javascriptSymbol} does not mach the expression ${regSymbol.source}`);
+        }
+    </script>
+
+    <strong>
+        javascript dollar symbol ( $ ) metacharacter symbol
+    </strong>
+    <small class="bg-warning text-white p-2 d-block my-2">
+        ( $ ) dollar symbol hme string k end me mach kr ke deta hai ki hamare string same mach word se end ho rhi hai
+        ja nhi
+    </small>
+    <p id="javascript-dollar-symbol"></p>
+    <script>
+        let regSymbolDollar = /kas$/;
+        let javascriptDollar = "My name is vikas kumar vikas";
+        let javascriptDollarResult = regSymbolDollar.exec(javascriptDollar);
+        document.getElementById("javascript-dollar-symbol").innerHTML = javascriptDollarResult;
+        console.log("This is a javascript Dollar ( $ ) section ");
+        console.log("The result from exce is :- ", javascriptDollarResult);
+
+        if (regSymbolDollar.test(javascriptDollar)) {
+            console.log(`The string is ${javascriptDollar} match is expression ${regSymbolDollar.source}`);
+        }
+        else {
+            console.log(`The string is ${javascriptDollar} does not mach the expression ${regSymbolDollar.source}`);
+        }
+    </script>
+
+    <strong>
+        javascript . symbol ( . ) metacharacter symbol
+    </strong>
+    <small class="bg-warning text-white p-2 d-block my-2">
+        ( . ) dot symbol hme hamare string k match charachter me koi v one word add hone per b result print kr k deti
+        hai example below like this
+    </small>
+    <p id="javascript-dot-symbol"></p>
+    <script>
+        let regDot = /v.ikas/;
+        let javascriptDot = "My name is vgikas kumar and vikas is a vikas";
+        let javascriptDotResult = regDot.exec(javascriptDot);
+        console.log("This is a dot symbol section ( . )");
+        console.log("The result exec is :- ", javascriptDotResult);
+
+        if (regDot.test(javascriptDot)) {
+            document.getElementById("javascript-dot-symbol").innerHTML = javascriptDotResult + "<br>" + "The value is match and check the console ";
+            console.log(`The string is ${javascriptDot} match the expression is ${regDot.source}`);
+        }
+        else {
+            document.getElementById("javascript-dot-symbol").innerHTML = javascriptDotResult + "<br>" + "The value does not mach please check the console";
+            console.log(`The string is ${javascriptDot} does not match the expression is ${regDot.source}`);
+        }
+    </script>
+
+<strong>
+    javascript star symbol ( * ) metacharacter symbol
+</strong>
+<small class="bg-warning text-white p-2 d-block my-2">
+    ( * ) star symbol hme hamare string k match charachter me one jyada word v add kr skte hai example below lke This
+</small>
+<p id="javascript-star-symbol"></p>
+<script>
+    let regStar = /v*ikas/;
+    let javascriptStar = "My name is vhgikas and vikas is a vikas ";
+    let javascriptStarResult = regStar.exec(javascriptStar);
+    console.log("This is a Star symbol (*) section ");
+    console.log("The result is exce is :- " , javascriptStarResult);
+    if (regStar.test(javascriptStar)) {
+        document.getElementById("javascript-star-symbol").innerHTML = javascriptStarResult + "<br>" + "Check the console";
+        console.log(`The string is ${javascriptStar} match the expression is ${regStar.source}`);
+    }
+    else {
+        document.getElementById("javascript-star-symbol").innerHTML = javascriptStarResult + "<br>" + "Check the console";
+        console.log(`The string is ${javascriptStar} does not match the expression is ${regStar.source}`);
+    }
+</script>
+
+<strong>
+    javascript optionsl symbol ( ? ) metacharacter symbol
+</strong>
+<small class="bg-warning text-white p-2 d-block my-2">
+    ( ? ) optional symbol hme hamare string k match chatachter me woh word ho ja na ho jo hamne optional kr rkhe hai to v result ko print kr dega example below like this 
+</small>
+<p id="javascript-optional-symbol"></p>
+<script>
+    let regOptional = /vi?kas?/;
+    let javascriptOptional = "My name is vka kumar and vikas is vikas";
+    let javascriptOptionalResult = regOptional.exec(javascriptOptional);
+    console.log("This is a optional symbol ( ? ) sectionn ");
+    console.log("The result is exce is :- " , javascriptOptionalResult);
+    if (regOptional.test(javascriptOptional)) {
+        document.getElementById("javascript-optional-symbol").innerHTML = javascriptOptionalResult + "<br>" + "Check the console ";
+        console.log(`The string is ${javascriptOptional} is match the expression is ${regOptional.source}`);
+    }
+    else {
+        document.getElementById("javascript-optional-symbol").innerHTML = javascriptOptionalResult + "<br>" + "Check the console and answer does not match answer";
+        console.log(`The string is ${javascriptOptional} does not match the expression is ${regOptional.source}`);
+    }
+</script>
+
+
+</body>
+
+</html>
