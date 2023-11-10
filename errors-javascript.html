@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Errors javascript</title>
+    <!-- bootstrap link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body style="margin-bottom: 100px;">
+    <marquee behavior="" direction="" class="text-primary ">All its result are in the console</marquee>
+    <h1 class="bg-success p-2 text-center text-white">javascript Errors section </h1>
+
+    <strong>javascript try and catch method </strong>
+    <small class="bg-warning text-white d-block p-2 my-2"> <i>NOTE</i> :-
+        javascript try and catch method uses the catch Errors in your code. agar try me kuj error hoga to catch method
+        run hoga and osme jo v define kiya hoga woh hme error k roop me show hoga.
+    </small>
+    <p id="javascript-try-catch" class="text-danger"></p>
+    <script>
+        try {
+            document.getElementById("javascript-try-catch").innerHTML = "This is a try method";
+            hello; // hello esme error generate kr reha hai agar hello ki cut kr diya jay to error cut ho jayga
+            console.log("This is a try Section");
+        } catch (error) {
+            // error esme aak variabel ka work kr reha hai jo hme correct error batata hai
+            document.getElementById("javascript-try-catch").innerHTML = error + "<br>" + "This is a catch method";
+            console.log(error);
+        }
+    </script>
+
+    <strong>javascript set time out method</strong>
+    <small class="bg-warning text-white d-block p-2 my-2">es method ki help se hm kisi v error ko hold krke show kr
+        skte hai ki hamara error kitne time k bad run hoga ja hm apni ersme koi html or css ka code v kr skte hai NOTE
+        :- esme try and catch method set time out k under likha jayga or hmne yha milisecond set kiye hai to jb tk yha
+        milisecond complete na ho jay tb tak function run nhi hoga console me </small>
+    <p id="javascript-set-time" class="text-danger"></p>
+    <script>
+        setTimeout(function () {
+            try {
+                console.log("This is a set time try method");
+                // helloBhai;//yeh hamare pass error hai jiksa out put esko uncomment krne per console or screen per najar ayega 
+                document.getElementById("javascript-set-time").innerHTML = "This is a javascript set time out try method";
+            } catch (error) {
+                console.log(error, "This is a set time out catch method");
+                document.getElementById("javascript-set-time").innerHTML = error + "<br>" + "This is a javascript set time out catch method";
+            }
+        }, 2000)
+    </script>
+
+    <strong>
+        javascript Errors name, message, stack section
+    </strong>
+    <small class="bg-warning text-white d-block p-2 my-2">
+        esme hm apne error ko diffrent diffrent show kr skte hai jase name k under error ka name show hoga or message k
+        under oska message show hoga ki mesage kis k bare me hai or stack k under sbi kuj aa jata hai name or message
+        or line number etc..
+    </small>
+    <p id="javascript-error-name"></p>
+    <p id="javascript-error-message"></p>
+    <p id="javascript-error-stack"></p>
+    <script>
+        try {
+            hello; // esko uncomment krne per catch wale section k error show hoge
+            document.getElementById("javascript-error-name").innerHTML = "This is a javascript Error name try method";
+            document.getElementById("javascript-error-message").innerHTML = "This is a javascript Error message try method";
+            document.getElementById("javascript-error-stack").innerHTML = "This is a javascript Error stack try method";
+        } catch (error) {
+            document.getElementById("javascript-error-name").innerHTML = error;
+            console.log(error, "This is a javascript error name method");
+            document.getElementById("javascript-error-message").innerHTML = error;
+            console.log(error, "This is a javascript error message method");
+            document.getElementById("javascript-error-stack").innerHTML = error;
+            console.log(error, "This is a javascript error stack method");
+        }
+    </script>
+
+    <strong>javascript Error if else condition </strong>
+    <small class="bg-warning text-white d-block p-2 my-2">esme hm if else condition lga k error ko show kr skte hai ki
+        konsa erro aa reha hai </small>
+    <p id="javascript-if-else"></p>
+    <script>
+        try {
+            helloBhai;
+            document.getElementById("javascript-if-else").innerHTML = "This is a javascript if else error try method";
+        } catch (error) {
+            if (error instanceof ReferenceError) {
+                console.log("This is a ReferenceError");
+            } else if (error instanceof TypeError) {
+                console.log("This is a javascript TypeError");
+            } else {
+                console.log("This is a javascript unknowm error");
+            };
+            document.getElementById("javascript-if-else").innerHTML = error;
+        };
+    </script>
+
+    <strong>javascript error JSON section, How to get data for json server</strong>
+    <small class="bg-warning text-white d-block p-2 my-2">esme hm json server se data ko get krege or error ko v show
+        krege or esme finally method k bare me padege </small>
+    <h2 class="bg-dark text-white p-2 text-center">( JSON.parse ) hamare server k data ko javascript code object me
+        convert kr deta hai </h2>
+    <h1 class="text-center">AND</h1>
+    <h2 class="bg-dark text-white p-2 text-center">( JSON.stringify ) hanare javascript k code ko JSON k code me
+        convert kr deta hai </h2>
+    <p id="javascript-json-server"></p>
+    <script>
+        try {
+            // helloJson;
+            // document.getElementById("javascript-json-server").innerHTML = "This is a javascript json sever get data ";
+            let json = '{"name":"vikas","age":23}';
+            let user = JSON.parse(json);
+            if (!user.type) {
+                throw new Error("incomplete data : no type");
+            }
+            console.log(user.name);
+            console.log(user.age);
+        } catch (error) {
+            document.getElementById("javascript-json-server").innerHTML = error;
+            console.log(error);
+        } finally {
+            console.log("finally complete the error");
+        };
+    </script>
+
+    <h1 class="bg-success text-white text-center p-2 my-3">Input Validation in javascript </h1>
+    <strong>javascript input validation section </strong>
+    <div class="my-2">
+        <input type="text" id="input-text">
+        <button type="button" class="border bg-primary p-2 text-center rounded" onclick="inputValidation()">Check
+            Input</button>
+        <p id="javascript-input-validation"></p>
+    </div>
+    <script>
+        function inputValidation() {
+            const message = document.getElementById("javascript-input-validation");
+            message.innerHTML = " ";
+            let inputValue = document.getElementById("input-text").value;
+            try {
+                if (inputValue.trim() == "") throw "Empty";
+                if (isNaN(inputValue)) throw "Not a number";
+                inputValue = Number(inputValue);
+                if (inputValue < 5) throw "Too low";
+                if (inputValue > 10) throw "Too high";
+            } catch (error) {
+                message.innerHTML = "Input is " + error;
+            } finally {
+                document.getElementById("input-text").value = "";
+            }
+        }
+    </script>
+
+    <h1 class="text-center">Error Name Values</h1>
+    <small class="bg-warning text-white d-block p-2 my-2">
+        Six different values can be returned by the error nameproperty:
+    </small>
+            <div class="text-center text-danger">
+                <h3>EvalError</h3>
+                <h3>RangeError</h3>
+                <h3>ReferenceError</h3>
+                <h3>SyntaxError</h3>
+                <h3>TypeError</h3>
+                <h3>URIError</h3>
+            </div>
+            <div class="div">
+                <h4>The six different values are described below.</h4>
+            </div>
+
+            <strong>
+                NOTE :- javascript EvalError is not supported the javascript new version
+            </strong>
+
+
+
+
+</body>
+
+</html>
