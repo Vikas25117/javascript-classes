@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+$color: red;
+$bgcolor: yellow;
+h1{
+    // colors variabels ka use krne se pehale hme variabels ko define krna hota hai 
+    color: $color;
+    background: $bgcolor;
+}

@@ -2,43 +2,131 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo Section </title>
-    <!-- bootstrap link  -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo Section </title>
+  <!-- bootstrap link  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body style="margin-bottom: 100px;">
 
-    <h1 class="bg-warning p-2 text-white text-center">javascript demo section </h1>
-    <p id="if-else-condition"></p>
-    <!-- <script>
+  <h1 class="bg-warning p-2 text-white text-center">javascript demo section </h1>
+  <p id="if-else-condition"></p>
 
+  <!-- <script>
         for (let i = 1; i < 101; i++) {
-
-
             document.getElementById("if-else-condition").insertAdjacentHTML("beforeend", `${i}<br>`);
         }
     </script> -->
-
-    
-    <script>
-    //   var rows=10;
-    //   var cols=101;
-
-document.write("<table>");
-  for (i=1; i<3; i++) {
-    // document.write(i + " <br>");
-    document.write("<th>");
-      for (j=1; j<7; j++) {
-        document.write("<td>" +j+"</td>");
+  <h2 class="bg-success p-2 text-white text-center">javascript loop nested section and demo design</h2>
+  <strong class="d-block my-2">Example one </strong>
+  <script>
+    for (let a = 1; a <= 5; a++) {
+      for (let b = 1; b <= a; b++) {
+        document.write(b + " ");
       }
-    document.write("</tr>");
-  }
-document.write("</table>");
-    </script>
-   
+      document.write("<br>");
+    }
+  </script>
+
+  <strong class="d-block my-2">Example Two </strong>
+  <script>
+    for (let i = 1; i <= 5; i++) {
+      for (let j = 1; j <= i; j++) {
+        document.write(i + " ");
+      }
+      document.write("<br>");
+    }
+  </script>
+
+  <strong class="d-block my-2 ">Example Three</strong>
+  <script>
+    for (let a = 5; a >= 1; a--) {
+      for (let b = 1; b <= a; b++) {
+        document.write(a + "  ");
+      }
+      document.write("<br>");
+    }
+  </script>
+
+  <strong class="d-block my-2">Example four</strong>
+  <script>
+    for (let a = 5; a >= 1; a--) {
+      for (let b = a; b >= 1; b--) {
+        document.write(b + " ");
+      }
+      document.write("<br>");
+    }
+  </script>
+
+  <strong class="d-block my-2">Example Five </strong>
+  <script>
+    // let rows = prompt("Please enter", "");
+    printPattern(rows);
+    function printPattern(r) {
+      // document.write(rows);
+      for (let i = 1; i <= rows; i++) {
+        for (let j = 1; j <= i; j++) {
+          document.write(" * ");
+        }
+        document.write("<br/>");
+      }
+      for (let i = rows; i >= 1; i--) {
+        for (let j = 1; j <= i; j++) {
+          document.write(" * ");
+        }
+        document.write("<br>");
+      }
+    }
+  </script>
+
+  <strong class="d-block my-2">Example Six</strong>
+  <script>
+
+    for (let a = 1; a <= 5; a++) {
+      for (let c = 5; c >= a; c--) {
+        document.write("&nbsp;&nbsp;");
+      }
+      // document.write(a + " ");
+      for (let b = 1; b <= ((2 * a) - 1); b++) {
+        document.write(" * ");
+      }
+      document.write("<br>")
+    }
+  </script>
+
+  <strong class="d-block my-2">Example Seven</strong>
+  <script>
+
+    for (let ab = 1; ab <= 5; ab++) {
+      for (let cc = 5; cc > ab; cc--) {
+        document.write(" &nbsp;&nbsp; ");
+      }
+      // document.write(a + " ");
+      for (let bb = 1; bb <= ((2 * ab) - 1); bb++) {
+        if (ab == 1 || ab == 5 || bb == 1 || bb == ((2 * ab) - 1)) {
+          document.write(" * ");
+        } else document.write(" &nbsp;&nbsp; ")
+      }
+      document.write("<br>")
+    }
+  </script>
+
+  <strong class="d-block my-2">
+    Example Eight
+  </strong>
+
+  <script>
+    for (let i = 0; i <= 9; i++) {
+      // es condition me yeh 0 se 9 tk run hoga 
+      // document.write(i + "<br>")
+      for (let j = 0; j <= 10; j++) {
+        document.write(i * 10 + j + " ");
+      }
+      document.write("<br>");
+    }
+  </script>
 
 </body>
 
