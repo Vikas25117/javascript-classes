@@ -8,7 +8,46 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+    <marquee behavior="" direction="" class="bg-success p-2 text-white">This page shown result in console</marquee>
     <h1 class="bg-warning p-2 text-white text-center">This is a javascript classes section </h1>
-    
+    <p id="classes"></p>
+<!-- ================================= -->
+<script>
+    class gretting{
+        message(){
+            document.getElementById("classes").innerHTML = "Good Morning";
+            console.log("Hello Vikas");
+        }
+        sorry(){
+            console.log("Sorry yrr");
+        }
+    }
+    let res = new gretting();
+    res.message();
+    res.sorry();
+    </script>
+    <!-- ================================= -->
+
+    <!-- ========================= javascript constructor section -->
+    <script>
+        class student{
+            constructor(name,age){
+                this.studentname = name;
+                this.studentage = age;
+                console.log("Constructor Function");
+            }
+            hello(){
+                document.write(`Hello ${this.studentname} your age is ${this.studentage}`);
+            }
+            static staticMethod(){
+                console.log("This is a static function");
+            }
+        }
+        let a = new student("vikas kumar",23);
+        student.staticMethod()
+        a.hello()
+    </script>
+    <!-- ========================= ./ javascript constructor section -->
+
 </body>
 </html>
