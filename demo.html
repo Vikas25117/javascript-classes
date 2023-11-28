@@ -118,13 +118,31 @@
   </strong>
 
   <script>
-    for (let i = 0; i <= 9; i++) {
-      // es condition me yeh 0 se 9 tk run hoga 
+    for (let a = 1; a <= 10; a++) {
       // document.write(i + "<br>")
-      for (let j = 0; j <= 10; j++) {
-        document.write(i * 10 + j + " ");
+      for (let b = 1; b <= 10; b++) {
+        // x = i +
+        document.write(b + ' ');
       }
       document.write("<br>");
+    }
+  </script>
+
+  <strong class="d-block my-2">
+    Example Nine
+  </strong>
+  <script>
+    for (let x = 1; x <= 10; x++) {
+      // document.write(x + " ");
+      // inner loop 
+      for (let y = x; y <= 100; y += 10) {
+        // es condition se hm koi v line ki delete kr skte hai 
+        if(y == (90 + x)){continue}
+        document.write(y + " ");
+        let spacing = y < 10 ? "&nbsp; &nbsp;" : "&nbsp;";
+        document.write(`${spacing}`);
+      }
+      document.write("<br>")
     }
   </script>
 

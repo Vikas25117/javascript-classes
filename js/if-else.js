@@ -16,21 +16,36 @@ if (hour >= 8 && hour < 13) {
 document.getElementById("javascript-if-else").innerHTML = greeting;
 
 // javascript else if conditions 
-let hours = new Date();
-hours.setHours(23);
-let asd = hours.getHours();
+// let hours = new Date();
+// hours.getHours();
+// let asd = hours.setHours();
+// let usd = asd.toString() ;
 
-console.log(asd)
-if (asd > 8 && asd < 12) {
-    gretting = "Good morning bhai";
-} else if (asd >= 12 && asd < 14) {
-    gretting = "Good afternoon";
-} else if (asd >= 14 && hours < 19) {
-    gretting = "Good evening"
-} else if (asd >= 19 && asd < 23) {
-    gretting = "Good Night"
+// console.log(usd);
+// if (usd > 8 && usd < 12) {
+//     var gretting = "Good morning bhai";
+// } else if (usd >= 12 && usd < 14) {
+//     gretting = "Good afternoon";
+// } else if (usd >= 14 && hours < 19) {
+//     gretting = "Good evening"
+// } else if (usd >= 19 && usd < 23) {
+//     gretting = "Good Night"
+// }
+// else {
+//     gretting = "Good Morning";
+// }
+// document.getElementById("javascript-else-if").innerHTML = gretting + usd;
+// document.write(hours);
+
+// javascript date if else condition 
+let getDateSection = new Date();
+// getDateSection.setHours(getDateSection.getHours () + 6);
+// getDateSection.setMinutes (getDateSection.getMinutes () + 38);
+let timeSec = getDateSection.getHours();
+if(timeSec > 16 && timeSec < 17){
+    var wish = "Good Evening sir ";
 }
-else {
-    gretting = "Good Morning";
+else{
+    wish = "Good 😀 sir";
 };
-document.getElementById("javascript-else-if").innerHTML = gretting;
+document.getElementById("javascript_date_method").innerHTML = timeSec + " " + wish;
