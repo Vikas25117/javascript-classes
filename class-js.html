@@ -51,6 +51,59 @@
     </script>
     <!-- ========================= ./ javascript constructor section -->
 
+    <strong class="my-3 d-block">javascript classes section</strong>
+    <p id="javascript_class"></p>
+    <script>
+        class myCar {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+        }
+        const myCarOne = new myCar("Audi", 2020);
+        const myCarTwo = new myCar("Ford", 2021);
+        document.getElementById("javascript_class").innerHTML = myCarOne.name + " " + myCarOne.year + " <br> " + myCarTwo.name + " " + myCarTwo.year;
+    </script>
+
+    <strong class="d-block my-3">JavaScript Class Methods</strong>
+    <p id="class_methods"></p>
+    <script>
+        class classMethods {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+            age() {
+                const date = new Date();
+                return date.getFullYear() - this.year;
+            }
+        }
+        const myCarModel = new classMethods("ford", 1999);
+        document.getElementById("class_methods").innerHTML = `My car is ${myCarModel.age()} years old`;
+    </script>
+
+    <strong class="my-3 d-block">javascript class Methods in other way :- Pass a parameter into the "age()"
+        method.</strong>
+    <p id="class_methods_two"></p>
+
+    <script>
+        class classMethodsTwo {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            } 
+            age(x) {
+                return x - this.year;
+            }
+        }
+        const date = new Date();
+        let year = date.getFullYear();
+
+        const myCarModelTwo = new classMethodsTwo("ford", 2000);
+        document.getElementById("class_methods_two").innerHTML = `My car is ${myCarModelTwo.age(year)} years old`;
+    </script>
+
+
 </body>
 
 </html>
