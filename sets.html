@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>javascript sets method</title>
-     <!-- bootstrap link  -->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body style="margin-bottom: 100px;">
     <h1 class="text-center p-2 bg-warning text-white">javascript sets methods </h1>
+    <div class="d-flex justify-content-center">
+        <div class="bg-danger text-center p-2 rounded my-2">
+            <a href="./index.html" class="text-decoration-none h6 text-white">Home Page</a>
+        </div>
+    </div>
     <strong>javascript new set() method</strong>
     <small class="bg-danger d-block p-2 text-white my-2">
-        javascript new set() method me hm array ko set methods me likh skte hai or esme eski length check nhi hoti size check hota hai example below like this
+        javascript new set() method me hm array ko set methods me likh skte hai or esme eski length check nhi hoti size
+        check hota hai example below like this
     </small>
     <p id="javascript-set-method"></p>
     <script>
@@ -20,7 +28,7 @@
     </script>
 
     <strong>
-        javascript create a set and add values 
+        javascript create a set and add values
     </strong>
     <small class="bg-danger d-block p-2 text-white my-2">
         esme hm value ko add kr skte hai new values ko
@@ -39,7 +47,7 @@
         javascript create a set and add a variabels
     </strong>
     <small class="bg-danger d-block p-2 text-white my-2">
-        esme hm values ko variabels me save krke direct variabels ko add kr skte hai 
+        esme hm values ko variabels me save krke direct variabels ko add kr skte hai
     </small>
     <p id="javascript-add-variabels-set"></p>
     <script>
@@ -48,7 +56,7 @@
         let addVariabelsSetTwo = "kumar";
         let addVariabelsSetThree = "kargwal";
         let addVariabelsSetFour = "vicky";
-        
+
         addVariabelsSet.add(addVariabelsSetOne);
         addVariabelsSet.add(addVariabelsSetTwo);
         addVariabelsSet.add(addVariabelsSetThree);
@@ -58,10 +66,12 @@
     </script>
 
     <strong>
-        javascript add methods 
+        javascript add methods
     </strong>
     <small class="bg-danger d-block p-2 text-white my-2">
-        javascript set add() method esme hm values ko alag se add kr skte hai variabel k bahar same variabel me hi add kr skte hai <mark class="mx-1">NOTE :- esme hm same name ki values add nhi kr skte jase ki same name ki values three hai to osme one hi collect hogi or eska size v nhi bdega </mark>
+        javascript set add() method esme hm values ko alag se add kr skte hai variabel k bahar same variabel me hi add
+        kr skte hai <mark class="mx-1">NOTE :- esme hm same name ki values add nhi kr skte jase ki same name ki values
+            three hai to osme one hi collect hogi or eska size v nhi bdega </mark>
     </small>
     <p id="add-set-methods"></p>
     <script>
@@ -75,7 +85,8 @@
         javascritp set forEach() method
     </strong>
     <small class="bg-danger d-block p-2 text-white my-2">
-        yeh hme apne array ki values nikal k deta hai or esme hmne value() name ka method use kiya hai woh v forEach method me
+        yeh hme apne array ki values nikal k deta hai or esme hmne value() name ka method use kiya hai woh v forEach
+        method me
     </small>
     <p id="set-for-each-method"></p>
     <script>
@@ -88,10 +99,10 @@
     </script>
 
     <strong>
-        javascript set values() methods 
+        javascript set values() methods
     </strong>
     <small class="bg-danger d-block p-2 text-white my-2">
-        esme hmne set values() method ka use kiya hai 
+        esme hmne set values() method ka use kiya hai
     </small>
     <p id="javascript-set-value-method"></p>
     <script>
@@ -109,11 +120,12 @@
     <script>
         let setValuesMethod = new Set(["vikas", "kumar", "kargwal", "vicky"]);
         let setValuesMethodText = "";
-        for(let setvaluesResult of setValuesMethod){
+        for (let setvaluesResult of setValuesMethod) {
             setValuesMethodText += setvaluesResult + "<br>";
         };
         document.getElementById("javascript-set-values-method").innerHTML = setValuesMethodText;
     </script>
-    
+
 </body>
+
 </html>

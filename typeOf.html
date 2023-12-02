@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,19 @@
     <!-- bootstrap link  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body style="margin-bottom: 100px;">
 
     <h1 class="bg-warning text-white p-2 text-center">
-        javascript TypeOf section and JavaScript Type Conversion 
+        javascript TypeOf section and JavaScript Type Conversion
     </h1>
+    <div class="d-flex justify-content-center">
+        <div class="bg-danger text-center p-2 rounded my-2">
+        <a href="./index.html" class="text-decoration-none h6 text-white">Home Page</a>
+    </div></div>
     <small class="p-2 text-white bg-success my-2 d-block">
         <h3>JavaScript there are 5 different data types that can contain values:-
-        </h3> 
+        </h3>
         <p class="m-0">string</p>
         <p class="m-0">number</p>
         <p class="m-0">boolean</p>
@@ -40,12 +46,12 @@
 
     <p id="converting-string-to-number"></p>
     <script>
-        document.getElementById("converting-string-to-number").innerHTML = Number("10.12") + "<br>" + 
-        Number(Math.PI) + "<br>" + 
-        Number("   ") + "<br>" + 
-        Number("") + "<br>" + 
-        Number("99 88 ") + "<br>" + 
-        Number("Vikas");
+        document.getElementById("converting-string-to-number").innerHTML = Number("10.12") + "<br>" +
+            Number(Math.PI) + "<br>" +
+            Number("   ") + "<br>" +
+            Number("") + "<br>" +
+            Number("99 88 ") + "<br>" +
+            Number("Vikas");
     </script>
     <strong>javascript The Unary + Operator</strong>
     <small class="d-block bg-warning text-white my-2 p-2">
@@ -59,7 +65,7 @@
     </script>
 
     <strong>
-        Converting Numbers to Strings 
+        Converting Numbers to Strings
     </strong>
     <small class="d-block bg-warning text-white my-2 p-2">
         yeh hme numbers ko string me change kr deta hai
@@ -67,8 +73,9 @@
     <p id="javascript-number-to-string"></p>
     <script>
         let numbersChangeString = 700;
-        document.getElementById("javascript-number-to-string").innerHTML = typeof numbersChangeString + " " + numbersChangeString + "<br>" + typeof numbersChangeString.toString() + " " + numbersChangeString ;
+        document.getElementById("javascript-number-to-string").innerHTML = typeof numbersChangeString + " " + numbersChangeString + "<br>" + typeof numbersChangeString.toString() + " " + numbersChangeString;
     </script>
-    
+
 </body>
+
 </html>
