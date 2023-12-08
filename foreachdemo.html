@@ -50,9 +50,9 @@
     </div>
     <script>
         let forEachArray = [
-            { name: "Jam Josh", age: 44, salary: 4000, currency: "USD" },
-            { name: "Justina Kap", age: 34, salary: 3000, currency: "USD" },
-            { name: "Chris Colt", age: 37, salary: 3700, currency: "USD" }
+            { name: "vikas kumar", age: 25, salary: 4000, currency: "USD" },
+            { name: "kuldeep", age: 23, salary: 3000, currency: "USD" },
+            { name: "vicky", age: 24, salary: 3700, currency: "USD" }
         ];
         // Array to collect the data
         let dataArray = [];
@@ -64,7 +64,8 @@
 
             // Loop through the keys and values of the object
             for (const [key, val] of Object.entries(value)) {
-                test += `<p><strong>${key}:</strong> ${val}</p>`;
+                test += `<p><strong>${key}:</strong> </p>
+                <h1>${val[age]}</h1>`;
 
                 // Store the key and value in the dataObject
                 dataObject[key] = val;
